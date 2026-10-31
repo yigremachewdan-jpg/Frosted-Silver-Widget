@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root" android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="4dp" android:background="@android:color/transparent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:gravity="center" android:paddingTop="2dp" android:paddingBottom="18dp">
+        <TextView android:id="@+id/clock" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="5:12" android:textColor="#FFF0F1F4" android:textSize="76sp"
+            android:fontFamily="sans-serif-thin" android:letterSpacing="-0.04" />
+        <TextView android:id="@+id/date" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Sat, Oct 31" android:textColor="#FFE1E3E8" android:textSize="13sp"
+            android:letterSpacing="0.28" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="118dp"
+        android:orientation="horizontal" android:gravity="center_vertical" android:padding="14dp"
+        android:background="@drawable/glass_panel">
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1.15"
+            android:orientation="vertical" android:gravity="center_vertical">
+            <TextView android:id="@+id/weather_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="☁" android:textSize="34sp" android:textColor="#FFF2F3F6"/>
+            <TextView android:id="@+id/temp" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="22°" android:textSize="28sp" android:textColor="#FFF5F6F8"/>
+            <TextView android:id="@+id/location" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Addis Ababa" android:textSize="11sp" android:textColor="#FFD7DAE0"/>
+            <TextView android:id="@+id/condition" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Partly cloudy" android:textSize="11sp" android:textColor="#FFE7E9ED"/>
+        </LinearLayout>
+        <View android:layout_width="1dp" android:layout_height="82dp" android:background="#66DDE1E8"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center_vertical" android:paddingStart="14dp">
+            <TextView android:id="@+id/forecast1" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Sat   ⛅   24°  9°" android:textSize="12sp" android:textColor="#FFE8EAF0"/>
+            <TextView android:id="@+id/forecast2" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Sun   ☀   25°  9°" android:textSize="12sp" android:textColor="#FFE8EAF0" android:paddingTop="8dp"/>
+            <TextView android:id="@+id/forecast3" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Mon   ☀   25°  9°" android:textSize="12sp" android:textColor="#FFE8EAF0" android:paddingTop="8dp"/>
+            <TextView android:id="@+id/forecast4" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Tue   ⛅   25°  9°" android:textSize="12sp" android:textColor="#FFE8EAF0" android:paddingTop="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="116dp" android:orientation="horizontal"
+        android:layout_marginTop="14dp" android:padding="12dp" android:gravity="center_vertical"
+        android:background="@drawable/glass_panel_dark">
+        <ImageView android:id="@+id/album_art" android:layout_width="74dp" android:layout_height="74dp"
+            android:src="@drawable/cover_placeholder" android:scaleType="centerCrop" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:orientation="vertical" android:paddingStart="12dp" android:gravity="center_vertical">
+            <TextView android:id="@+id/song" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Nothing playing" android:textSize="15sp" android:textColor="#FFF4F5F7" android:maxLines="1"/>
+            <TextView android:id="@+id/artist" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Connect a media player" android:textSize="12sp" android:textColor="#FFD5D8DE" android:maxLines="1"/>
+            <ProgressBar android:id="@+id/progress" style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent" android:layout_height="4dp" android:layout_marginTop="10dp"
+                android:progress="28" android:progressTint="#FFE7E9ED" android:progressBackgroundTint="#668A8E96"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+                android:gravity="center" android:paddingTop="5dp">
+                <TextView android:id="@+id/previous" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="|◀" android:textSize="20sp" android:gravity="center" android:textColor="#FFF4F5F7"/>
+                <TextView android:id="@+id/play" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="▶" android:textSize="23sp" android:gravity="center" android:textColor="#FFF4F5F7"/>
+                <TextView android:id="@+id/next" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="▶|" android:textSize="20sp" android:gravity="center" android:textColor="#FFF4F5F7"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
